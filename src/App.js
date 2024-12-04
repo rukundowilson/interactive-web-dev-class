@@ -40,6 +40,12 @@ import HeavyCalculation from './components/Question5/HeavyCalculation.js';
 import TodoList from "./components/Question5/TodoList.js";
 import LiveTime from "./components/Question5/LiveTime.js"
 
+// form registratin
+import LecturerRegistrationForm from "./components/RegForms/RectureReg.js"
+import StudentRegistrationForm from "./components/RegForms/StudentReg.js"
+import DriverRegistrationFormfrom from "./components/RegForms/RegisterDriver"
+import BookRegistrationForm from "./components/RegForms/RegBooks.js"
+import ModuleRegistrationForm from "./components/RegForms/ModuleReg.js"
 
 // ======= introducing===========
 import ProjectIntro from './Intro';
@@ -137,7 +143,7 @@ function App(){
                 <ItemsList items={items} />
         </div>
 
-        {/* toogle between on and off */}
+        <h1 className="mx-10 my-4 text-blue-500 text-4xl font-bold">Forms Handling</h1>
         <div className="m-10 bg-gray-100 p-6">
             <h1 className="text-xl font-bold">Questin 2.1: Create a button that toggles between "ON" and "OFF" states when clicked.</h1> <br/>
             <ToggleButton />
@@ -170,6 +176,7 @@ function App(){
             <br/>
             <DropdownMenu />
         </div>
+        <h1 className="mx-10 my-4 text-blue-500 text-4xl font-bold">Forms Handling</h1>
         <div className="m-10 bg-gray-100 p-6">
           <h1 className="text-xl font-bold mb-4">Questin 3.1: a simple login form with fields for username and password</h1>
             <LoginForm />
@@ -196,8 +203,7 @@ function App(){
             <h1 className="text-xl mb-4 font-bold">Question 3.5: a form with multiple checkbox inputs and display the selected options.</h1>
             <CheckboxForm />
         </div>
-
-        {/* ------ creating independent pages  */}
+        <h1 className="mx-10 my-4 text-blue-500 text-4xl font-bold">Routing</h1>
         <Router>
           <h1 className="text-lg font-bold m-10">Question 4.1: a basic React Router with three pages: Home, About, and Contact.</h1>
             <div className="m-10 bg-gray-100 flex flex-col items-center">
@@ -300,6 +306,7 @@ function App(){
         </Router>
         </div>
 
+        <h1 className="mx-10 my-4 text-blue-500 text-4xl font-bold">React.memo</h1>
         <div className="bg-gray-100 p-4 m-10">
             <h1 className="text-xl font-bold m-4" >Question 5.1 a parent component that passes a prop to a child component. Use
             React.memo to prevent the child component from re-rendering unnecessarily.</h1>
@@ -362,6 +369,31 @@ function App(){
             <LiveTime/>
 
             </div>
+        <div className="p-4 m-10">
+            <h1 className="text-blue-500 text-4xl font-bold">Registration Forms</h1>
+            <h1 className="my-5"> Q6.1: Add validation to ensure the email is in the correct format and phone number is
+            numeric.</h1>
+            <div className="bg-gray-100">
+                <LecturerRegistrationForm/>
+            </div>
+            <div className="bg-gray-100 p-4 px-10">
+                <h1 className="my-10">Question 6.2: Validate the Student ID to ensure it contains only alphanumeric characters.</h1>
+                <StudentRegistrationForm/>
+            </div>
+        </div>
+        <div className="bg-gray-100 p-10 m-10" >
+            <h1 className="my-10" >Question 6.3: Add a dropdown to select the vehicle type (e.g., car, truck, motorcycle).</h1>
+            <DriverRegistrationFormfrom/>
+        </div>
+        <div className="bg-gray-100 p-10 m-10" >
+            <h1 className="my-10" >Question 6.4: Ensure the Credits field accepts only numeric values and is required.</h1>
+            <BookRegistrationForm/>
+        </div>
+        <div className="bg-gray-100 p-10 m-10" >
+            <h1 className="my-10" >Question 6.5: Ensure the Credits field accepts only numeric values and is required.</h1>
+            <ModuleRegistrationForm/>
+
+        </div>
 
       </>
    
